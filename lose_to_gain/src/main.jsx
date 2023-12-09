@@ -6,6 +6,7 @@ import { RouterProvider, createBrowserRouter, createRoutesFromElements } from 'r
 import About from './Components/About/About.jsx'
 import Foods from './Components/Foods/Foods.jsx'
 import Chart from './Components/Chart/Chart.jsx'
+import Layout from './Components/Layout/Layout.jsx'
 
 //<Route path='user/:userid' element={<User />} />
 
