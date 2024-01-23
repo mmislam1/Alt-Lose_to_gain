@@ -1,7 +1,7 @@
 import {createSlice, nanoid } from '@reduxjs/toolkit';
 
 const initialState = {
-    foods: [{id: 1, text: "Hello world"}]
+    
 }
 
 
@@ -10,8 +10,8 @@ export const foodSlice = createSlice({
     name: 'food',
     initialState,
     reducers: {
-        addfood: (state, action) => {
-            const food = {
+        getfood: (state, action) => {
+            const { food } = {
                 id: nanoid(), 
                 text: action.payload
             }
@@ -23,6 +23,6 @@ export const foodSlice = createSlice({
     }
 })
 
-export const {addfood, removefood} = foodSlice.actions
+export const {getfood, removefood} = foodSlice.actions
 
 export default foodSlice.reducer
