@@ -1,4 +1,4 @@
-import {createSlice, nanoid } from '@reduxjs/toolkit';
+import {createSlice, nanoid , createAsyncThunk} from '@reduxjs/toolkit';
 
 const initialState = {
     
@@ -12,8 +12,9 @@ export const foodSlice = createSlice({
     reducers: {
         getfood: (state, action) => {
             const { food } = {
-                id: nanoid(), 
-                text: action.payload
+                // get request for foodlist
+
+
             }
             state.foods.push(food)
         },
