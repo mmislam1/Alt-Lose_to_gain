@@ -2,7 +2,11 @@ import React from 'react'
 
 const SelectedListItem = () => {
   return (
-    <div>SelectedListItem</div>
+    <div>
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
   )
 }
 

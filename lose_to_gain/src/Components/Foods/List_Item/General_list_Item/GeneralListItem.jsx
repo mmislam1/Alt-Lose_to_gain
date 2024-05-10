@@ -2,7 +2,11 @@ import React from 'react'
 
 const GeneralListItem = () => {
   return (
-    <div>GeneralListItem</div>
+    <div>
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
   )
 }
 
