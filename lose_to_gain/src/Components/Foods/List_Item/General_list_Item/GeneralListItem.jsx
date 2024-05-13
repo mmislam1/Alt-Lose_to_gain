@@ -16,7 +16,7 @@ const GeneralListItem = () => {
         </div>
       </div>
       <div>
-        <button></button>
+        <button>+</button>
       </div>
     </div>
   )

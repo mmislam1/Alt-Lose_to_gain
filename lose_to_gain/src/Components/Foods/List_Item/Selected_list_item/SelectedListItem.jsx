@@ -21,8 +21,8 @@ const SelectedListItem = () => {
       <div>
         <input></input>
         <div>
-          <button></button>
-          <button></button>
+          <button>-</button>
+          <button>+</button>
         </div>
       </div>
     </div>
