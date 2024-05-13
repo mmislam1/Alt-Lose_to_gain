@@ -15,7 +15,9 @@ const GeneralListItem = () => {
           <h6></h6>
         </div>
       </div>
-      <div></div>
+      <div>
+        <button></button>
+      </div>
     </div>
   )
 }

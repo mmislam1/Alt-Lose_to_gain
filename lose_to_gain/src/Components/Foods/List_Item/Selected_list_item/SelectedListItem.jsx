@@ -18,7 +18,13 @@ const SelectedListItem = () => {
           <h6></h6>
         </div>
       </div>
-      <div></div>
+      <div>
+        <input></input>
+        <div>
+          <button></button>
+          <button></button>
+        </div>
+      </div>
     </div>
   )
 }
