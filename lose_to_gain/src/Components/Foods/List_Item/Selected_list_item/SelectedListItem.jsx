@@ -3,7 +3,7 @@ import React from 'react'
 const SelectedListItem = () => {
   return (
     <div>
-      <div><h3>{ }</h3></div>
+      <div><h3>{item}</h3></div>
       <div>
         <div>
           <h6></h6>
