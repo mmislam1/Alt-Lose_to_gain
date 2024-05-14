@@ -3,7 +3,7 @@ import React from 'react'
 const GeneralListItem = () => {
   return (
     <div>
-      <div><h5>{ }</h5></div>
+      <div><h5>{item }</h5></div>
       <div>
         <div>
           <h6></h6>
