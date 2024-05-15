@@ -19,7 +19,10 @@ const SelectedListItem = () => {
         </div>
       </div>
       <div>
-        <input></input>
+        <input type='number'></input>
+        <div>
+          <h6>unit</h6>
+        </div>
         <div>
           <button>-</button>
           <button>+</button>
