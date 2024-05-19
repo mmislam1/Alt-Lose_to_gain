@@ -2,7 +2,7 @@ import React from 'react'
 
 const SelectedListItem = () => {
   return (
-    <div>
+    <div key=''>
       <div><h3>{item}</h3></div>
       <div>
         <div>
