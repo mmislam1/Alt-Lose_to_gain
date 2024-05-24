@@ -6,16 +6,16 @@ const GeneralListItem = () => {
       <div><h5>{item }</h5></div>
       <div>
         <div>
-          <h6></h6>
-          <h6></h6>
+          <h6>{macro}</h6>
+          <h6>{macro_amount}</h6>
         </div>
         <div>
-          <h6></h6>
-          <h6></h6>
+          <h6>{macro}</h6>
+          <h6>{macro_amount}</h6>
         </div>
         <div>
-          <h6></h6>
-          <h6></h6>
+          <h6>{macro}</h6>
+          <h6>{macro_amount}</h6>
         </div>
       </div>
       <div>
