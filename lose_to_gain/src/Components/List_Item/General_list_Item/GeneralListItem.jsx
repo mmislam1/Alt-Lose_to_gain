@@ -2,7 +2,7 @@ import React from 'react'
 
 const GeneralListItem = () => {
   return (
-    <div key=''>
+    <div key='' className='flex'>
       <div><h5>{item }</h5></div>
       <div>
         <div>
