@@ -24,8 +24,8 @@ const SelectedListItem = () => {
           <h6>unit</h6>
         </div>
         <div>
-          <div className=''><button>-</button></div>
-          <div className=''><button>+</button></div>
+          <div className='justify-center items-center'><button>-</button></div>
+          <div className='justify-center items-center'><button>+</button></div>
         </div>
       </div>
     </div>
