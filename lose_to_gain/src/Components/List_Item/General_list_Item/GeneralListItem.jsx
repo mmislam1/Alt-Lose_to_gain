@@ -18,7 +18,7 @@ const GeneralListItem = () => {
           <h6>{macro_amount}</h6>
         </div>
       </div>
-      <div>
+      <div className='justify-center items-center'>
         <button>+</button>
       </div>
     </div>
