@@ -1,8 +1,8 @@
 import React from 'react'
 
-const SelectedListItem = () => {
+const SelectedListItem = ({item}) => {
   return (
-    <div key='' className='flex'>
+    <div className='flex'>
       <div><h3>{item}</h3></div>
       <div className='flex-row'>
         <div className='flex-col'>

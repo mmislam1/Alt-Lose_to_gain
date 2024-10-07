@@ -1,6 +1,7 @@
 import React from 'react'
 import {GeneralListItem} from '../../List_Item/General_list_item/GeneralListItem.jsx'
 import { useState, useEffect } from 'react';
+import {SelectedListItem} from '../../List_Item/Selected_list_item/SelectedListItem.jsx';
 
 const Foods = () => {
   const [items, setItems] = useState([]);      
@@ -35,9 +36,14 @@ const Foods = () => {
       
       <ul>
         {items.map((item) => {
-          <li>
-            <GeneralListItem prop={item} />
-          </li>
+          
+              if(selected===item.id){
+              return <li key={item.id}><SelectedListItem item={item} /></li>
+            }
+            else{
+              return <li key={item.id}><GeneralListItem item={item} /></li>
+            }
+          
         })}
       </ul>
     </div>
