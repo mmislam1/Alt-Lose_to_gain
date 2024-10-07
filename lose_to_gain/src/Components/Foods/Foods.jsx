@@ -1,17 +1,17 @@
 import React from 'react'
-import GeneralListItem from "././List_Item/General_list_item/GeneralListItem.jsx"
-import SelectedListItem from "././List_Item/Selected_list_item/SelectedListItem.jsx"
+import {GeneralListItem} from '../../List_Item/General_list_item/GeneralListItem.jsx'
 import { useState, useEffect } from 'react';
 
 const Foods = () => {
   const [items, setItems] = useState([]);      
   const [loading, setLoading] = useState(true); 
-  const [error, setError] = useState(null);     
+  const [error, setError] = useState(null);
+  const [selected, setSelected] = useState(null);
 
   
   const fetchItems = async () => {
     try {
-      const response = await fetch('https://jsonplaceholder.typicode.com/posts');
+      const response = await fetch('');
       if (!response.ok) {
         throw new Error('Network response was not ok');
       }
@@ -34,12 +34,11 @@ const Foods = () => {
       <h1>Food List</h1>
       
       <ul>
-        {items.map((item) => (
-          <li key={item.id}>
-            <h3>{item.title}</h3>
-            <p>{item.body}</p>
+        {items.map((item) => {
+          <li>
+            <GeneralListItem prop={item} />
           </li>
-        ))}
+        })}
       </ul>
     </div>
   );
