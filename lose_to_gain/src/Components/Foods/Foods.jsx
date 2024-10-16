@@ -9,7 +9,9 @@ const Foods = () => {
   const [error, setError] = useState(null);
   const [selected, setSelected] = useState(null);
 
-  
+  const handleSelect=(id) => {
+    setSelected(id)
+  }
   const fetchItems = async () => {
     try {
       const response = await fetch('');
@@ -38,10 +40,10 @@ const Foods = () => {
         {items.map((item) => {
           
               if(selected===item.id){
-              return <li key={item.id}><SelectedListItem item={item} /></li>
+              return <li key={item.id} onClick={()=>handleSelect(item.id)}><SelectedListItem item={item} /></li>
             }
             else{
-              return <li key={item.id}><GeneralListItem item={item} /></li>
+              return <li key={item.id} onClick={()=>handleSelect(item.id)} ><GeneralListItem item={item} /></li>
             }
           
         })}
