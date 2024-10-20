@@ -4,7 +4,7 @@ import { useDispatch, useSelector } from 'react-redux'
 
 
 const PieChart = (prop) => {
-  const calorieDist = useSelector(state => state.input)
+  const calorieDist = useSelector(state => state.input) //change
 
 
 
