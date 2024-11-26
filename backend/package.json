@@ -1,0 +1,27 @@
+{
+  "name": "sajed",
+  "version": "1.0.0",
+  "description": "Lose To Gain backend",
+  "type": "module",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mmislam1/lose-to-gain.git#master"
+  },
+  "author": "Sajed",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mmislam1/lose-to-gain/issues"
+  },
+  "homepage": "https://github.com/mmislam1/lose-to-gain/tree/master#readme",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "dotenv": "^16.4.5",
+    "express": "^4.19.2",
+    "mongoose": "^8.4.4"
+  }
+}
