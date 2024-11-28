@@ -3,11 +3,6 @@ import express from 'express';
 import nodemailer from 'nodemailer';
 import PDFDocument from 'pdfkit';
 
-<<<<<<< HEAD
-
-=======
->>>>>>> c2956326da175d7fd50aa6035e0ae6842452e7ea
-
 
 export const createdPDF = async (req, res, next) => {
     /* Create a new PDF document*/
@@ -34,9 +29,9 @@ app.get('/pdf', (req, res) => {
     // Set up email data with unicode symbols
     const mailOptions = {
         from: 'mmislam272@gmail.com',
-        to: req.emailTo,
+        to: req.body.emailTo,
         subject: 'Diet chart from Lose to Gain.',
-        text: `Hello ${req.name},
+        text: `Hello ${req.body.name},
         Thank you for choosing Loose to Gain. Here is the PDF generated from the diet chart yu created. 
         .`,
         attachments: [{
