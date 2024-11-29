@@ -50,19 +50,11 @@ export const isAdmin = (req, res, next) => {
 
 
 export const isUser = (req, res, next) => {
-  if (req.user && req.user.isUser) {
+  if (req.user && !req.user.isAdmin) {
     next();
   } else {
     res.status(401).send({ message: 'Invalid User Token' });
   }
 };
 
-
-export const isUserOrAdmin = (req, res, next) => {
-  if (req.user && (req.user.isUser || req.user.isAdmin)) {
-    next();
-  } else {
-    res.status(401).send({ message: 'Invalid Admin/User Token' });
-  }
-};
 
