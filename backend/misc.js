@@ -9,7 +9,7 @@ export const generateToken = (user) => {
       name: user.name,
       email: user.email,
       isAdmin: user.isAdmin,
-      isSeller: user.isSeller,
+      isUser: user.isUser,
     },
     process.env.JWT_SECRET || 'somethingsecret',
     {
@@ -38,6 +38,8 @@ export const isAuth = (req, res, next) => {
     res.status(401).send({ message: 'No Token' });
   }
 };
+
+
 export const isAdmin = (req, res, next) => {
   if (req.user && req.user.isAdmin) {
     next();
@@ -45,18 +47,22 @@ export const isAdmin = (req, res, next) => {
     res.status(401).send({ message: 'Invalid Admin Token' });
   }
 };
-export const isSeller = (req, res, next) => {
-  if (req.user && req.user.isSeller) {
+
+
+export const isUser = (req, res, next) => {
+  if (req.user && req.user.isUser) {
     next();
   } else {
-    res.status(401).send({ message: 'Invalid Seller Token' });
+    res.status(401).send({ message: 'Invalid User Token' });
   }
 };
-export const isSellerOrAdmin = (req, res, next) => {
-  if (req.user && (req.user.isSeller || req.user.isAdmin)) {
+
+
+export const isUserOrAdmin = (req, res, next) => {
+  if (req.user && (req.user.isUser || req.user.isAdmin)) {
     next();
   } else {
-    res.status(401).send({ message: 'Invalid Admin/Seller Token' });
+    res.status(401).send({ message: 'Invalid Admin/User Token' });
   }
 };
 
