@@ -4,7 +4,7 @@ import nodemailer from 'nodemailer';
 import PDFDocument from 'pdfkit';
 
 
-export const createdPDF = async (req, res, next) => {
+export const createdPDF = async (chartData) => {
     /* Create a new PDF document*/
     const doc = new PDFDocument();
 
@@ -21,45 +21,7 @@ export const createdPDF = async (req, res, next) => {
         doc.fontSize(12).text(dynamicContent, 50, 50);
         doc.end();
     });
-    next()
+    
 }
 
-app.get('/pdf', (req, res) => {
-    
-    // Set up email data with unicode symbols
-    const mailOptions = {
-        from: 'mmislam272@gmail.com',
-        to: req.body.emailTo,
-        subject: 'Diet chart from Lose to Gain.',
-        text: `Hello ${req.body.name},
-        Thank you for choosing Loose to Gain. Here is the PDF generated from the diet chart yu created. 
-        .`,
-        attachments: [{
-            filename: 'dynamic_pdf.pdf',
-            content: buffer
-        }]
-    };
-
-    // Send email
-
-    const transporter = nodemailer.createTransport({
-    service: 'gmail', 
-    auth: {
-        user: process.env.nodemailerEmail,
-        pass: process.env.nodemailerPassword
-    }
-    });
-    
-    transporter.sendMail(mailOptions, (error, info) => {
-        if (error) {
-            console.log(error);
-            res.status(500).send('Error sending email');
-        } else {
-            console.log('Email sent: ' + info.response);
-            res.status(200).send('Email sent successfully');
-        }
-    });
-
-    
-});
 
