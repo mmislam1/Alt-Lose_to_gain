@@ -48,13 +48,13 @@ const doc = new PDFDocument();
   };
 
   // Draw header row
-  drawTableRow(tableTop, ['Name', 'Description', 'Price']);
+  drawTableRow(tableTop, ['Item', 'Amount', 'Calorie']);
   drawTableBorders(tableTop, -1);
 
   // Draw each item row
   chartData.forEach((item, i) => {
     const y = tableTop + rowHeight * (i + 1);
-    drawTableRow(y, [item.name, item.description, item.price]);
+    drawTableRow(y, [item.item, item.amount, item.calorie]);
     drawTableBorders(y, i);
   });
 
