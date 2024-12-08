@@ -3,14 +3,18 @@ import Chart from "../models/chartModel.js";
 import express from 'express';
 import { isAuth } from "../misc.js";
 import foodRouter from "./foodRouter.js";
-import { createdPDF } from "../pdfMailer.js";
+import { createPDF } from "../pdfMailer.js";
 
 
 const chartRouter = express.Router()
 
 chartRouter.post('/createChart', isAuth, expressAsyncHandler(async (req, res) => {
 
-createdPDF(req.body)    
+
+    const calorieData = (req.body)=>{
+        //calculation to be completed...
+    };
+createPDF(calorieData)    
 
 
 next()
