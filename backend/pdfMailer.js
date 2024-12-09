@@ -5,7 +5,7 @@ import PDFDocument from 'pdfkit';
 import { createWriteStream } from 'fs';
 
 
-export const createPDF = async (chartData) => {
+export const createPDF = async (chartData,totalData) => {
    
 const doc = new PDFDocument();
 

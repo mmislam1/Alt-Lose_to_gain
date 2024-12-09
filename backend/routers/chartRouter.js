@@ -21,9 +21,21 @@ chartRouter.post('/createChart', isAuth, expressAsyncHandler(async (req, res) =>
         } 
     })
 
-    const totalData = calorieData.map((item) => {
-        
-    })
+    const totalData = {proteinCal: 0,
+            carbCal: 0,
+            fatCal: 0,
+        totalCal: 0
+    }
+    
+
+    calorieData.forEach(item => {
+        totalData.proteinCal=totalData.proteinCal+item.proteinCal
+        totalData.carbCal=totalData.carbCal+item.carbCal
+        totalData.fatCal=totalData.fatCal+item.fatCal
+        totalData.totalCal=totalData.totalCal+item.totalCal
+    });
+
+
 createPDF(calorieData,totalData)    
 
 
