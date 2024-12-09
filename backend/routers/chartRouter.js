@@ -10,11 +10,21 @@ const chartRouter = express.Router()
 
 chartRouter.post('/createChart', isAuth, expressAsyncHandler(async (req, res) => {
 
+    const data=req.body
+    const calorieData = data.map((item)=> {
+        return {
+            name: item.name,
+            proteinCal: item.protein * 4,
+            carbCal: carb * 4,
+            fatCal: fat * 9,
+            totalCal: (item.protein * 4 + carb * 4 + fat * 9)
+        } 
+    })
 
-    const calorieData = (req.body)=>{
-        //calculation to be completed...
-    };
-createPDF(calorieData)    
+    const totalData = calorieData.map((item) => {
+        
+    })
+createPDF(calorieData,totalData)    
 
 
 next()
