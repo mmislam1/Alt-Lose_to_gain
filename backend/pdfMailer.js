@@ -10,7 +10,7 @@ export const createPDF = async (chartData,totalData) => {
 const doc = new PDFDocument();
 
   // Pipe the PDF to a file
-  doc.pipe(createWriteStream('table.pdf'));
+  doc.pipe(createWriteStream('Diet_Chart.pdf'));
 
   // Add some metadata
   doc.info.Title = 'PDF Table Example';
@@ -21,7 +21,7 @@ const doc = new PDFDocument();
 
   // Table configuration
   const tableTop = 100; // Y-coordinate for the table's start
-  const columnWidths = [150, 250, 100]; // Column widths for Name, Description, Price
+  const columnWidths = [100,70,70,70,70,70]; // Column widths for Name, Description, Price
   const rowHeight = 30; // Row height
   const tableLeft = 50; // X-coordinate for the table's left edge
 
@@ -48,7 +48,7 @@ const doc = new PDFDocument();
   };
 
   // Draw header row
-  drawTableRow(tableTop, ['Item', 'Amount', 'Calorie']);
+  drawTableRow(tableTop, ['Item', 'Amount', 'Protein', 'Carb', 'Fat', 'Total']);
   drawTableBorders(tableTop, -1);
 
   // Draw each item row

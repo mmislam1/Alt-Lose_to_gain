@@ -4,6 +4,7 @@ import express from 'express';
 import { isAuth } from "../misc.js";
 import foodRouter from "./foodRouter.js";
 import { createPDF } from "../pdfMailer.js";
+import fs from 'fs/promises';
 
 
 const chartRouter = express.Router()
@@ -38,12 +39,18 @@ chartRouter.post('/createChart', isAuth, expressAsyncHandler(async (req, res) =>
 
 createPDF(calorieData,totalData)    
 
+const filePath = './Diet_Chart.pdf'; 
 
-next()
-
-}))
-
-app.get('/createChart', (req, res) => {
+  try {
+    
+    await fs.access(filePath);
+  }
+    
+    catch (err) {
+    res.status(404).send('File does not exist');
+    }
+    
+    // Sending the diet chart to client
     
     // Set up email data with unicode symbols
     const mailOptions = {
@@ -51,10 +58,10 @@ app.get('/createChart', (req, res) => {
         to: req.body.emailTo,
         subject: 'Diet chart from Lose to Gain.',
         text: `Hello ${req.body.name},
-        Thank you for choosing Loose to Gain. Here is the PDF generated from the diet chart yu created. 
+        Thank you for choosing Loose to Gain. Here is the PDF generated from the diet chart you have created. 
         .`,
         attachments: [{
-            filename: 'dynamic_pdf.pdf',
+            filename: 'Diet_Chart.pdf',
             content: buffer
         }]
     };
@@ -79,8 +86,12 @@ app.get('/createChart', (req, res) => {
         }
     });
 
-    
-});
+
+
+
+}))
+
+
 
 
 export default chartRouter
