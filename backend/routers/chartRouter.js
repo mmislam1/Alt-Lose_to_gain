@@ -39,7 +39,7 @@ chartRouter.post('/createChart', isAuth, expressAsyncHandler(async (req, res) =>
 
 createPDF(calorieData,totalData)    
 
-const filePath = './Diet_Chart.pdf'; 
+const filePath = '../../Diet_Chart.pdf'; 
 
   try {
     
