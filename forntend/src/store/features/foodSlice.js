@@ -8,6 +8,6 @@ const foodSlice = createSlice({
     },
 });
 
-export const { increment, decrement, incrementByAmount } = foodSlice.actions;
+export const { load } = foodSlice.actions;
 
 export default foodSlice.reducer;
