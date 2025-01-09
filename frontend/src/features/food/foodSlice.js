@@ -10,7 +10,7 @@ export const foodSlice = createSlice({
     name: 'food',
     initialState,
     reducers: {
-        getfood: (state, action) => {
+        getfood: (state) => {
             const { food } = {
                 // get request for foodlist
 
