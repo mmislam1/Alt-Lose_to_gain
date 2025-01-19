@@ -10,7 +10,17 @@ function App() {
 
   return (
     <>
-      <Navigation/>
+      
+       <Router>
+        <Navigation />
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/chart" element={<Chart />} />
+          <Route path="/contact" element={<Contact />} />
+          <Route path="*" element={<NotFound />} />
+        </Routes>
+      
+    </Router>
     </>
   )
 }

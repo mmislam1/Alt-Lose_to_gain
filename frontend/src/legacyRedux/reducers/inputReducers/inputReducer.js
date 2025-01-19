@@ -1,4 +1,4 @@
-import { pieChartUpdate } from "../../actions/inputActions/inputActions";
+import { pieChartUpdate } from "../../../actions/inputActions/inputActions";
 
 
 export const inputReducer = (state = {}, action) => {
