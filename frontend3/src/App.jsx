@@ -1,8 +1,8 @@
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
-import Home from './components/Home';
+import Chart from './components/Chart';
 import About from './components/About';
-import Contact from './components/Contact';
+import Foods from './components/Foods';
 import NotFound from './components/NotFound';
 
 const App = () => {
@@ -13,22 +13,22 @@ const App = () => {
         <nav>
           <ul>
             <li>
-              <Link to="/">Home</Link>
+              <Link to="/">Chart</Link>
             </li>
             <li>
               <Link to="/about">About</Link>
             </li>
             <li>
-              <Link to="/contact">Contact</Link>
+              <Link to="/Foods">Foods</Link>
             </li>
           </ul>
         </nav>
 
         {/* Define Routes */}
         <Routes>
-          <Route path="/" element={<Home />} />
+          <Route path="/" element={<Chart />} />
           <Route path="/about" element={<About />} />
-          <Route path="/contact" element={<Contact />} />
+          <Route path="/Foods" element={<Foods />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </div>
