@@ -6,6 +6,7 @@ import SelectedListItem from '../List_Item/Selected_list_item/SelectedListItem'
 const FoodList = () => {
 
   const foodItems = useSelector(state => state.foodItems)
+  const [selectedItem, setSelectedItem] = useState(null);
 
   let flag=0
 
@@ -22,7 +23,7 @@ const FoodList = () => {
           else {
             return <div class="w-full h-[1px] bg-gray-400"></div>
           }
-          if (item.selected) {
+          if (item.id===selectedItem) {
             return <SelectedListItem item={item} />
           }
           else {
