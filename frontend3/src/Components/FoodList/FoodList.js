@@ -8,7 +8,15 @@ const FoodList = () => {
   const foodItems = useSelector(state => state.foodItems)
   const [selectedItem, setSelectedItem] = useState(null);
 
-  let flag=0
+  let flag = 0
+  
+  const handleSelect = (id) => {
+    setSelectedId(id);
+  };
+
+  const handleDeselect = () => {
+    setSelectedId(null);
+  };
 
 
   return (
@@ -24,10 +32,10 @@ const FoodList = () => {
             return <div class="w-full h-[1px] bg-gray-400"></div>
           }
           if (item.id===selectedItem) {
-            return <SelectedListItem item={item} />
+            return <SelectedListItem key={item.id} item={item} onDeselect={handleDeselect} />
           }
           else {
-            return <GeneralListItem item={item} />
+            return <GeneralListItem key={item.id} item={item} onSelect={handleSelect} />
           }
           
         })
