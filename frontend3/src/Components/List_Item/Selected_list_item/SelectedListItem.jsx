@@ -4,16 +4,16 @@ const SelectedListItem = ({item}) => {
   return (
     <div className='flex'>
       <div><h3>{item}</h3></div>
-      <div className='flex-row'>
-        <div className='flex-col'>
+      <div className='flex flex-row'>
+        <div className='flex flex-col'>
           <h6>{macro}</h6>
           <h6>{macro_amount}</h6>
         </div>
-        <div className='flex-col'>
+        <div className='flex flex-col'>
           <h6>{macro}</h6>
           <h6>{macro_amount}</h6>
         </div>
-        <div className='flex-col'>
+        <div className='flex flex-col'>
           <h6>{macro}</h6>
           <h6>{macro_amount}</h6>
         </div>

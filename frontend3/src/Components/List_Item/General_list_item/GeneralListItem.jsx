@@ -4,16 +4,16 @@ const GeneralListItem = ({item}) => {
   return (
     <div  className='flex'>
       <div><h5>{item }</h5></div>
-      <div className='flex-row'>
-        <div className='flex-col'>
+      <div className='flex flex-row'>
+        <div className='flex flex-col'>
           <h6>{macro}</h6>
           <h6>{macro_amount}</h6>
         </div>
-        <div className='flex-col'>
+        <div className='flex flex-col'>
           <h6>{macro}</h6>
           <h6>{macro_amount}</h6>
         </div>
-        <div className='flex-col'>
+        <div className='flex flex-col'>
           <h6>{macro}</h6>
           <h6>{macro_amount}</h6>
         </div>
