@@ -6,16 +6,16 @@ const SelectedListItem = ({item}) => {
       <div><h3>{item}</h3></div>
       <div className='flex flex-row'>
         <div className='flex flex-col'>
-          <h6>{macro}</h6>
-          <h6>{macro_amount}</h6>
+          <h6 className='font-bold text-red-500'>{macro}</h6>
+          <h6 className='font-bold text-red-500'>{macro_amount}</h6>
         </div>
         <div className='flex flex-col'>
-          <h6>{macro}</h6>
-          <h6>{macro_amount}</h6>
+          <h6 className='font-bold text-red-500'>{macro}</h6>
+          <h6 className='font-bold text-red-500'>{macro_amount}</h6>
         </div>
         <div className='flex flex-col'>
-          <h6>{macro}</h6>
-          <h6>{macro_amount}</h6>
+          <h6 className='font-bold text-red-500'>{macro}</h6>
+          <h6 className='font-bold text-red-500'>{macro_amount}</h6>
         </div>
       </div>
       <div>
