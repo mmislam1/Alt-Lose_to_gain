@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import GeneralListItem from '../List_Item/General_list_item/GeneralListItem'
 import SelectedListItem from '../List_Item/Selected_list_item/SelectedListItem'
+import Total_of_list from '../List_Item/Total_of_list/Total_of_list'
 
 const FoodList = () => {
 
@@ -39,7 +40,8 @@ const FoodList = () => {
           }
           
         })
-        }
+      }
+      <Total_of_list/>
         
     </div>
 
