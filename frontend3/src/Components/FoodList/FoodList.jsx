@@ -30,7 +30,7 @@ const FoodList = () => {
             flag = 1
           }
           else {
-            return <div class="w-full h-[1px] bg-gray-400"></div>
+            return <div class="w-full h-[1px] bg-black-400"></div>
           }
           if (item.id===selectedItem) {
             return <SelectedListItem key={item.id} item={item} onDeselect={handleDeselect} />

@@ -6,8 +6,9 @@ const Total_of_list = () => {
   const totalFat = useSelector((state) => state.totalFat)
   
   return (
-      <div className='flex flex-row items-center'>
-          <div className='flex flex-row justify-center items-center'>
+      
+    <div className='flex flex-row justify-center items-center '>
+        
         <div className='flex justify-center items-center'>
           <h6 className='font-bold text-red-500'>{totalFat}</h6>
         </div>
@@ -17,8 +18,11 @@ const Total_of_list = () => {
         <div className='flex justify-center items-center'>
           <h6 className='font-bold text-green-500'>{totalProtein}</h6>
         </div>
+        <div className='flex justify-center items-center'>
+          <h6 className='font-bold text-black-800'>{totalProtein+totalCarb+totalFat}</h6>
+        </div>
       </div>
-    </div>
+    
   )
 }
 
