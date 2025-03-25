@@ -40,7 +40,7 @@ const Foods = () => {
         {items.map((item) => {
           
               if(selected===item.id){
-              return <li key={item.id} onClick={()=>handleSelect(item.id)}><SelectedListItem item={item} /></li>
+              return <li key={item.id} onClick={()=>setSelected(null)}><SelectedListItem item={item} /></li>
             }
             else{
               return <li key={item.id} onClick={()=>handleSelect(item.id)} ><GeneralListItem item={item} /></li>
